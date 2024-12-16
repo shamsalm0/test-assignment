@@ -13,7 +13,7 @@
 <body>
 <div class="relative flex gap-[92px] flex-col items-center justify-center  pt-[120px] px-[300px]  ">
     
-        <div class="flex gap-[60px] max-w-[1320px] w-full items-center h-[720px]">
+        <div class="flex gap-[60px] w-[1320px] w-full items-center h-[720px]">
             <div class="flex-shrink-0 max-w-1/2">
                 <img id="product-image" src="/src/assets/violet.png" alt="" height="720"  />
             </div>
@@ -32,8 +32,8 @@
                 </div> 
                 <!--  -->
                 <div class="pt-[5px] flex gap-[5px]">
-                    <p class="text-[20px] text-[#8091A7] leading-[30px] font-normal line-through">$99.00</p>
-                    <p class="text-[24px] text-[#6576FF] leading-[30px] font-bold ">$79.00</p>
+                    <p id="previousPrice" class="text-[20px] text-[#8091A7] leading-[30px] font-normal line-through">$99.00</p>
+                    <p id="newPrice" class="text-[24px] text-[#6576FF] leading-[30px] font-bold ">$79.00</p>
                 </div>
                 <!--  -->
                 <div class="flex pt-5 pr-1 gap-[8px] ">
@@ -57,10 +57,10 @@
                 <div class="pt-5 pr-1 flex flex-col gap-[10px]">
                     <p class="text-lg font-bold leading-5 text-[#364A63]">Band Color</p>
                    <div class="flex flex-row gap-[19px] ml-1">
-                    <div class="band w-[18px] h-[18px] bg-[#816BFF] rounded-full outline outline-offset-2 outline-2 outline-[#816BFF]" data-image="/src/assets/violet.png"></div>
-                    <div class="band w-[18px] h-[18px] bg-[#1FCEC9] rounded-full" data-image="/src/assets/green.png"></div>
-                    <div class="band w-[18px] h-[18px] bg-[#4B97D3] rounded-full" data-image="/src/assets/blue.png"></div>
-                    <div class="band w-[18px] h-[18px] bg-[#3B4747] rounded-full" data-image="/src/assets/black.png"></div>
+                    <div class="band w-[18px] h-[18px] bg-[#816BFF] rounded-full outline outline-offset-2 outline-2 outline-[#816BFF]" data-color="violet" data-image="/src/assets/violet.png"></div>
+                    <div class="band w-[18px] h-[18px] bg-[#1FCEC9] rounded-full" data-color="green" data-image="/src/assets/green.png"></div>
+                    <div class="band w-[18px] h-[18px] bg-[#4B97D3] rounded-full" data-color="blue" data-image="/src/assets/blue.png"></div>
+                    <div class="band w-[18px] h-[18px] bg-[#3B4747] rounded-full" data-color="black" data-image="/src/assets/black.png"></div>
                    </div>
                 </div>
                 <!--  -->
@@ -68,17 +68,17 @@
                     
                         <p class="font-bold text-lg leading-5">Wrist Size</p>
                    <div class="flex gap-[12px]">
-                    <div class="px-[18px] py-[8px] border border-[#DBDFEA]  flex gap-[10px] rounded-[3px]">
-                        <p class="font-bold text-[13px] leading-5 text-[#6576FF]">S <span class="font-normal text-[#8091A7]">$69</span></p>
+                    <div class="size px-[18px] py-[8px] border border-[#DBDFEA]  flex gap-[10px] rounded-[3px]">
+                        <p class="font-bold text-[13px] leading-5 text-[#6576FF]"><span class="size-name">S</span><span class="font-normal text-[#8091A7]">$69</span></p>
                     </div>
-                    <div class="px-[18px] py-[8px] border border-[#DBDFEA] flex gap-[10px] rounded-[3px]">
-                        <p class="font-bold text-[13px] leading-5 text-[#364A63]">M <span class="font-normal text-[#8091A7]">$79</span></p>
+                    <div class="size px-[18px] py-[8px] border border-[#DBDFEA] flex gap-[10px] rounded-[3px]">
+                        <p class="font-bold text-[13px] leading-5 text-[#364A63]"><span class="size-name">M</span> <span class="font-normal text-[#8091A7]">$79</span></p>
                     </div>
-                    <div class="px-[18px] py-[8px] border border-[#DBDFEA] flex gap-[10px] rounded-[3px]">
-                        <p class="font-bold text-[13px] leading-5 text-[#364A63]">L <span class="font-normal text-[#8091A7]">$89</span></p>
+                    <div class="size px-[18px] py-[8px] border border-[#DBDFEA] flex gap-[10px] rounded-[3px]">
+                        <p class="font-bold text-[13px] leading-5 text-[#364A63]"><span class="size-name">L</span> <span class="font-normal text-[#8091A7]">$89</span></p>
                     </div>
-                    <div class="px-[18px] py-[8px] border border-[#DBDFEA flex gap-[10px]] rounded-[3px]">
-                        <p class="font-bold text-[13px] leading-5 text-[#364A63]">XL <span class="font-normal text-[#8091A7]">$99</span></p>
+                    <div class="size px-[18px] py-[8px] border border-[#DBDFEA flex gap-[10px]] rounded-[3px]">
+                        <p class="font-bold text-[13px] leading-5 text-[#364A63]"><span class="size-name">XL</span> <span class="font-normal text-[#8091A7]">$99</span></p>
                     </div>
                    </div>
                 </div>
@@ -86,18 +86,18 @@
                 <div class="pt-5 flex items-center gap-[12px]">
                     <div class="h-9 flex   border border-[#DBDFEA] rounded-[4px]">
                         <div class="px-3 py-3 h-9 flex  gap-[10px] border-[0.5px] border-[#DBDFEA]">
-                            <button class="flex items-center text-[#DBDFEA]"><i class="fa-solid fa-minus"></i></button>
+                            <button class="flex items-center text-[#DBDFEA]"><i id="decrement" class="fa-solid fa-minus"></i></button>
                         </div>
                         <div class="flex gap-[10px]  border-[0.5px] border-[#DBDFEA] px-[26px] py-[3px]">
                             <!-- <input type="text" value="0" class="outline-none text-center" readonly> -->
-                             <p>0</p>
+                             <p id="quantity">0</p>
                         </div>
                         <div class="px-3 py-3 h-9 flex  gap-[10px] border-[0.5px] border-[#DBDFEA]">
-                            <button class="flex items-center text-[#DBDFEA]"><i class="fa-solid fa-plus"></i></button>
+                            <button class="flex items-center text-[#DBDFEA]"><i id="increment" class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
                     <div>
-                        <button class="px-[18px] py-[8px] flex gap-[10px] bg-[#6576FF] border rounded-[3px] text-[13px] text-white leading-5 font-bold ">Add to Cart</button>
+                        <button id="addToCart" class="px-[18px] py-[8px] flex gap-[10px] bg-[#6576FF] border rounded-[3px] text-[13px] text-white leading-5 font-bold ">Add to Cart</button>
                     </div>
                     <div class="h-5 w-5 flex items-center gap-[12px]">
                         <button><i class="fa-regular fa-heart mt-2 ml-1 h-4 w-[19px] text-[#6576FF]"></i></button>
@@ -132,7 +132,7 @@
                 <th class="text-center w-[10%]">Qnt</th>
                 <th class="text-right w-[20%]">Price</th>
             </thead>
-            <tbody>
+            <tbody id="cart-table-body">
                 <tr class="border-b border-[#DBDFEA] ">
                     <td class="w-[278px] flex gap-2 items-center pr-1 pb-4">
                         <div class="py-1"> <img src="./src/assets/black.png" class="rounded-[3px]" height="36" width="36" alt="" srcset=""> </div>
@@ -144,28 +144,6 @@
                     <td class="text-[#364A63] text-sm font-bold leading-[23.1px] text-right"><p>$99.00</p></td>
                 </tr>
 
-                <tr class="border-b border-[#DBDFEA] ">
-                    <td class="w-[278px] flex gap-2 items-center pr-1 pb-4">
-                        <div class="py-1"> <img src="./src/assets/blue.png" class="rounded-[3px]" height="36" width="36" alt="" srcset=""> </div>
-                        <p class="text-sm text-[#364A63] font-normal leading-[23.1px]">Classy Modern Smart watch</p>
-                    </td>
-                    <td class="text-[#364A63] text-sm font-normal leading-[23.1px] text-center"><p>Blue</p></td>
-                    <td class="text-[#364A63] text-sm font-bold leading-[23.1px] text-center"><p>L</p></td>
-                    <td class="text-[#364A63] text-sm font-bold leading-[23.1px] text-center"><p>2</p></td>
-                    <td class="text-[#364A63] text-sm font-bold leading-[23.1px] text-right"><p>$178.00</p></td>
-                </tr>
-
-                <tr class="border-b border-[#DBDFEA] ">
-                    <td class="w-[278px] flex gap-2 items-center pr-1 pb-4">
-                        <div class="py-1"> <img src="./src/assets/green.png.png" class="rounded-[3px]" height="36" width="36" alt="" srcset=""> </div>
-                        <p class="text-sm text-[#364A63] font-normal leading-[23.1px]">Classy Modern Smart watch</p>
-                    </td>
-                    <td class="text-[#364A63] text-sm font-normal leading-[23.1px] text-center"><p>Green</p></td>
-                    <td class="text-[#364A63] text-sm font-bold leading-[23.1px] text-center"><p>M</p></td>
-                    <td class="text-[#364A63] text-sm font-bold leading-[23.1px] text-center"><p>1</p></td>
-                    <td class="text-[#364A63] text-sm font-bold leading-[23.1px] text-right"><p>$79.00</p></td>
-                </tr>
-
                 <tr class=" ">
                     <td class="font-bold text-base text-[#373737] leading-[22px] ">
                         Total
@@ -173,7 +151,7 @@
                     <td class="text-[#364A63] text-sm font-normal leading-[23.1px] text-center"></td>
                     <td class="text-[#364A63] text-sm font-bold leading-[23.1px] text-center"></td>
                     <td class="text-[#364A63] text-sm font-bold leading-[23.1px] text-center"><p>1</p></td>
-                    <td class="text-[#364A63] text-sm font-bold leading-[23.1px] text-right"><p>$99.00</p></td>
+                    <td class=" text-[#364A63] text-sm font-bold leading-[23.1px] text-right"><p id="total-price">$0</p></td>
                 </tr>
             </tbody>
         </table>
@@ -181,9 +159,9 @@
         <div class="flex justify-end pt-[10px]">
             <div class=" flex justify-end gap-6">
                 <div class="py-2 px-[18px] flex gap-[10px] border border-[#DBDFEA] rounded-[3px]">
-                    <p class="text-[13px] text-[#364A63] font-bold leading-5">Continue Shopping</p>
+                    <p id="continue-shopping" class="text-[13px] text-[#364A63] font-bold leading-5">Continue Shopping</p>
                 </div>
-              <button class="flex gap-[10px] py-2 px-[18px] rounded-[3px] bg-[#6576FF] text-[13px] text-[#FFFFFF] font-bold leading-5">CheckOut</button>
+              <button id="confirm-checkout" class="flex gap-[10px] py-2 px-[18px] rounded-[3px] bg-[#6576FF] text-[13px] text-[#FFFFFF] font-bold leading-5">CheckOut</button>
             </div>
         </div>
     </div>
