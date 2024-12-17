@@ -35,7 +35,7 @@ document.getElementById('increment').addEventListener('click',()=>{
     document.getElementById('quantity').innerText = `${quantity}`;
     
     calculateTotalPrice();
-})
+},{passive:true})
 
 document.getElementById('decrement').addEventListener('click',()=>{
     if(quantity>0){
@@ -56,31 +56,38 @@ document.addEventListener('DOMContentLoaded', () => {
     bandOptions.forEach(option => {
         option.addEventListener('click', () => {
             const newImage = option.getAttribute('data-image');
-            productImage.setAttribute('src', newImage); 
             const newColor = option.getAttribute('data-color');
+            productImage.setAttribute('src', newImage);
 
             currentProduct.image = newImage;
             currentProduct.color = newColor;
-            bandOptions.forEach(opt => opt.classList.remove('outline', 'outline-offset-2', 'outline-2', 'outline-[#816BFF]'));
+            bandOptions.forEach(opt => {
+                opt.classList.remove('outline', 'outline-offset-2', 'outline-2');
+                opt.style.outlineColor = ''; 
+            });
 
-            option.classList.add('outline', 'outline-offset-2', 'outline-2', 'outline-[#816BFF]');
+            option.classList.add('outline', 'outline-offset-2', 'outline-2');
+            option.style.outlineColor = newColor;
         });
     });
 });
 
-sizes.forEach(size=>{
-    size.addEventListener('click', () => {
-        selectedItemPrice = parseFloat(size.querySelector('.font-normal').textContent.replace('$', '')).toFixed(2);
-        console.log(selectedItemPrice);
-        currentProduct.size = size.querySelector('.size-name').textContent;
-        currentProduct.price = selectedItemPrice;
-        console.log(currentProduct);
-        document.getElementById('previousPrice').innerText ='$'+(parseFloat(selectedItemPrice)+20).toFixed(2);
-        document.getElementById('newPrice').innerText ='$'+(parseFloat(selectedItemPrice)).toFixed(2);
-        sizes.forEach(opt => opt.classList.remove('bg-blue-100'));
-        size.classList.add('bg-blue-100');
 
-        calculateTotalPrice();
+document.addEventListener('DOMContentLoaded',()=>{
+    sizes.forEach(size=>{
+        size.addEventListener('click', () => {
+            selectedItemPrice = parseFloat(size.querySelector('.font-normal').textContent.replace('$', '')).toFixed(2);
+            console.log(selectedItemPrice);
+            currentProduct.size = size.querySelector('.size-name').textContent;
+            currentProduct.price = selectedItemPrice;
+            console.log(currentProduct);
+            document.getElementById('previousPrice').innerText ='$'+(parseFloat(selectedItemPrice)+20).toFixed(2);
+            document.getElementById('newPrice').innerText ='$'+(parseFloat(selectedItemPrice)).toFixed(2);
+            sizes.forEach(opt => opt.classList.remove('bg-blue-100'));
+            size.classList.add('bg-blue-100');
+    
+            calculateTotalPrice();
+        })
     })
 })
 
@@ -127,7 +134,8 @@ function updateCartTable() {
 }
 
 document.getElementById('addToCart').addEventListener('click', () => {
-    // Clone the current product object and push it to the product list
+    
+    console.log('add to cart')
     const productToAdd = { ...currentProduct };
     productList.push(productToAdd);
     
