@@ -33,6 +33,7 @@ document.getElementById('increment').addEventListener('click',()=>{
     quantity = quantity+1;
     currentProduct.quantity = quantity;
     document.getElementById('quantity').innerText = `${quantity}`;
+    
     calculateTotalPrice();
 })
 
@@ -109,6 +110,7 @@ function updateCartTable() {
 
     const totalAmount = productList.reduce((sum, product) => sum + product.price * product.quantity, 0);
     const totalQuantity = productList.reduce((sum,product)=>sum+product.quantity,0); 
+    document.getElementById("checkOut-count").innerText = totalQuantity
 
     const totalRow = document.createElement('tr');
     totalRow.innerHTML = `
@@ -141,6 +143,8 @@ document.getElementById('addToCart').addEventListener('click', () => {
 document.getElementById('continue-shopping').addEventListener('click',()=>{
     document.getElementById('modal').classList.toggle('hidden');
 })
+
+
 
 document.getElementById('confirm-checkout').addEventListener('click',()=>{
     productList = [];

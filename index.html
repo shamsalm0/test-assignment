@@ -11,11 +11,11 @@
     <title>Document</title>
 </head>
 <body>
-<div class="relative flex gap-[92px] flex-col items-center justify-center  pt-[120px] px-[300px]  ">
+<div class="relative container mx-auto px-8 pt-12 flex flex-col items-center gap-16">
     
-        <div class="flex gap-[60px] w-[1320px] w-full items-center h-[720px]">
+        <div class="md:flex gap-[60px] max-w-[1320px] w-full items-center h-[720px]">
             <div class="flex-shrink-0 max-w-1/2">
-                <img id="product-image" src="/src/assets/violet.png" alt="" height="720"  />
+                <img id="product-image" class="w-full h-auto object-cover rounded-lg shadow-lg" src="/src/assets/violet.png" alt="" height="720"  />
             </div>
             <!--  -->
             <div class="w-full max-w-1/2">
@@ -112,9 +112,9 @@
       
       
      
-     <div class="flex gap-[12px] py-5 ">
+     <div class="fixed bottom-0 left-0 w-full  flex justify-end md:justify-center py-5 border-t md:static md:border-none">
         <div class="h-[42px] py-2 px-6 flex gap-[10px] border-none rounded-[24px] bg-[#FFBB5A]">
-            <button class="flex items-center gap-[10px]" id="checkOut"> CheckOut <div class="bg-white px-[6px] py-[2px] flex gap-[8px] rounded-[5px]"> <span class="text-[#364A63] text-[12px] leading-[16px] font-bold ">2</span> </div></button>
+            <button class="flex items-center gap-[10px]" id="checkOut"> CheckOut <div class="bg-white px-[6px] py-[2px] flex gap-[8px] rounded-[5px]"> <span id="checkOut-count" class=" text-[#364A63] text-[12px] leading-[16px] font-bold ">0</span> </div></button>
         </div>
     </div>
     <!--  -->
