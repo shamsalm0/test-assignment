@@ -11,16 +11,16 @@
     <title>Document</title>
 </head>
 <body>
-<div class="relative container mx-auto px-8 pt-12 flex flex-col items-center gap-16">
+<div class="relative container  mx-auto px-8 pt-12 flex flex-col items-center gap-16">
     
-        <div class="md:flex gap-[60px] max-w-[1320px] w-full items-center h-[720px]">
+        <div class="lg:flex gap-[60px] max-w-[1320px] w-full items-center h-[720px]">
             <div class="flex-shrink-0 max-w-1/2">
-                <img id="product-image" class="w-full h-auto object-cover rounded-lg shadow-lg" src="/src/assets/violet.png" alt="" height="720"  />
+                <img id="product-image" class="w-full h-[300px] md:h-auto max-h-[720px] object-cover rounded-lg shadow-lg" src="/src/assets/violet.png" alt="" height="720"  />
             </div>
             <!--  -->
             <div class="w-full max-w-1/2">
                <div class="py-3">
-                <p class=" font-semibold text-[40px] text-[#364A63] leading-[44px]">Classy Modern Smart watch</p>
+                <p class=" font-semibold text-[24px] md:text-[40px] text-[#364A63] leading-[44px]">Classy Modern Smart watch</p>
                </div>
                 <div class="pr-1 pb-1">
                     <i class="fa-solid fa-star fa-sm text-[#FFD200]"></i>
@@ -32,25 +32,25 @@
                 </div> 
                 <!--  -->
                 <div class="pt-[5px] flex gap-[5px]">
-                    <p id="previousPrice" class="text-[20px] text-[#8091A7] leading-[30px] font-normal line-through">$99.00</p>
-                    <p id="newPrice" class="text-[24px] text-[#6576FF] leading-[30px] font-bold ">$79.00</p>
+                    <p id="previousPrice" class="text-[12px] md:text-[20px] text-[#8091A7] leading-[30px] font-normal line-through">$99.00</p>
+                    <p id="newPrice" class="text-[16px] md:text-[24px] text-[#6576FF] leading-[30px] font-bold ">$79.00</p>
                 </div>
                 <!--  -->
                 <div class="flex pt-5 pr-1 gap-[8px] ">
-                   <p class="font-base text-[18px] text-[#8091A7]  leading-[30px]">
+                   <p class="font-base text-[12px] md:text-[18px] text-[#8091A7]  leading-[30px]">
                     I must explain to you how all this mistaken idea of denoun cing ple praising pain was born and I will give you a complete account of the system, and expound the actual teaching.
                    </p>
                 </div>
                 <!--  -->
                 <div class="flex pt-5 pr-1 gap-[43px]">
                     <div class="">
-                        <p class="text-sm leading-[23.1px] font-normal text-[#8091A7]">Type</p>
-                        <p class="text-base font-bold leading-[23px] text-[#364A63]">Watch</p>
+                        <p class="text-[8px] md:text-sm leading-[23.1px] font-normal text-[#8091A7]">Type</p>
+                        <p class="text-[10px] md:text-base font-bold leading-[23px] text-[#364A63]">Watch</p>
                     </div>
                     <!--  -->
                     <div>
-                        <p class="font-normal text-sm leading-[23.1px] text-[#8091A7]">Model Number</p>
-                        <p class="font-bold text-base leading-[23px] text-[#364A63]">Forerunner 290XT </p>
+                        <p class="font-normal text-[8px] md:text-sm leading-[23.1px] text-[#8091A7]">Model Number</p>
+                        <p class="font-bold text-[10px] text-base leading-[23px] text-[#364A63]">Forerunner 290XT </p>
                     </div>              
                 </div>
                                 <!--  -->
@@ -112,7 +112,7 @@
       
       
      
-     <div class="fixed md:relative bottom-0 md:flex   py-5 ">
+     <div class="fixed lg:relative bottom-0 lg:flex   py-5 ">
         <div class="h-[42px] py-2 px-6 flex gap-[10px] border-none rounded-[24px] bg-[#FFBB5A]">
             <button class="flex items-center gap-[10px]" id="checkOut"> CheckOut <div class="bg-white px-[6px] py-[2px] flex gap-[8px] rounded-[5px]"> <span id="checkOut-count" class=" text-[#364A63] text-[12px] leading-[16px] font-bold ">0</span> </div></button>
         </div>
