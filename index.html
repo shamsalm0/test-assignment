@@ -64,21 +64,21 @@
                    </div>
                 </div>
                 <!--  -->
-                <div class="pt-2 md:pt-3 lg:pt-5 flex flex-col gap-[10px] justify-center">
+                <div class="pt-2 md:pt-3 lg:pt-5 flex flex-col gap-[10px] justify-center ">
                     
                         <p class="font-bold text-base md:text-lg leading-5">Wrist Size</p>
-                   <div class="grid grid-cols-2 md:grid-cols-4 gap-[12px]">
-                    <div class="size px-[18px] py-[8px] border border-[#DBDFEA]  flex items-center gap-[10px] rounded-[3px]">
-                        <p class="font-bold text-[13px] leading-5 text-[#6576FF]"><span class="size-name">S</span><span class="font-normal text-[#8091A7]">$69</span></p>
+                   <div class="grid grid-cols-2 md:grid-cols-4 gap-[12px] w-1/2">
+                    <div class="size px-[18px] py-[4px] border border-[#DBDFEA]  flex items-center gap-[10px] rounded-[3px] font-bold text-[13px] leading-5 text-[#6576FF]">
+                        <span class="size-name">S</span><span class="font-normal text-[#8091A7]">$69</span>
                     </div>
-                    <div class="size px-[18px] py-[8px] border border-[#DBDFEA] flex gap-[10px] rounded-[3px]">
-                        <p class="font-bold text-[13px] leading-5 text-[#364A63]"><span class="size-name">M</span> <span class="font-normal text-[#8091A7]">$79</span></p>
+                    <div class="size px-[18px] py-[8px] border border-[#DBDFEA] flex gap-[10px] rounded-[3px] font-bold text-[13px] leading-5 text-[#364A63]">
+                        <span class="size-name">M</span> <span class="font-normal text-[#8091A7]">$79</span>
                     </div>
-                    <div class="size px-[18px] py-[8px] border border-[#DBDFEA] flex gap-[10px] rounded-[3px]">
-                        <p class="font-bold text-[13px] leading-5 text-[#364A63]"><span class="size-name">L</span> <span class="font-normal text-[#8091A7]">$89</span></p>
+                    <div class="size px-[18px] py-[8px] border border-[#DBDFEA] flex gap-[10px] rounded-[3px] font-bold text-[13px] leading-5 text-[#364A63] ">
+                        <span class="size-name">L</span> <span class="font-normal text-[#8091A7]">$89</span>
                     </div>
-                    <div class="size px-[18px] py-[8px] border border-[#DBDFEA flex gap-[10px]] rounded-[3px]">
-                        <p class="font-bold text-[13px] leading-5 text-[#364A63]"><span class="size-name">XL</span> <span class="font-normal text-[#8091A7]">$99</span></p>
+                    <div class="size px-[18px] py-[8px] border border-[#DBDFEA] flex gap-[10px] rounded-[3px] font-bold text-[13px] leading-5 text-[#364A63]">
+                        <span class="size-name">XL</span> <span class="font-normal text-[#8091A7]">$99</span>
                     </div>
                    </div>
                 </div>
@@ -126,22 +126,16 @@
 
         <table class="w-full table-fixed border-collapse">
             <thead class="pt-1 pb-2 pr-1 border-b text-[#8091A7] text-sm leading-[23.1px] font-normal border-[#DBDFEA]">
-                <th class="text-left w-[50%]">Item</th>
+                <th class="text-left w-[20%] md:w-[50%]">Item</th>
                 <th class="text-center w-[10%]">Color</th>
                 <th class="text-center w-[10%]">Size</th>
                 <th class="text-center w-[10%]">Qnt</th>
-                <th class="text-right w-[20%]">Price</th>
+                <th class="text-right w-[10%] md:w-[20%]">Price</th>
             </thead>
             <tbody id="cart-table-body">
                 <tr class="border-b border-[#DBDFEA] ">
                     <td class="w-[278px] flex gap-2 items-center pr-1 pb-4">
-                        <div class="py-1"> <img src="./src/assets/black.png" class="rounded-[3px]" height="36" width="36" alt="" srcset=""> </div>
-                        <p class="text-sm text-[#364A63] font-normal leading-[23.1px]">Classy Modern Smart watch</p>
-                    </td>
-                    <td class="text-[#364A63] text-sm font-normal leading-[23.1px] text-center"><p>Black</p></td>
-                    <td class="text-[#364A63] text-sm font-bold leading-[23.1px] text-center"><p>XL</p></td>
-                    <td class="text-[#364A63] text-sm font-bold leading-[23.1px] text-center"><p>1</p></td>
-                    <td class="text-[#364A63] text-sm font-bold leading-[23.1px] text-right"><p>$99.00</p></td>
+                   
                 </tr>
 
                 <tr class=" ">
@@ -159,9 +153,9 @@
         <div class="flex justify-end pt-[10px]">
             <div class=" flex justify-end gap-6">
                 <div class="py-2 px-[18px] flex gap-[10px] border border-[#DBDFEA] rounded-[3px]">
-                    <p id="continue-shopping" class="text-[13px] text-[#364A63] font-bold leading-5">Continue Shopping</p>
+                    <p id="continue-shopping" class="text-[10px] md:text-[13px] text-[#364A63] font-bold md:leading-5">Continue Shopping</p>
                 </div>
-              <button id="confirm-checkout" class="flex gap-[10px] py-2 px-[18px] rounded-[3px] bg-[#6576FF] text-[13px] text-[#FFFFFF] font-bold leading-5">CheckOut</button>
+              <button id="confirm-checkout" class="md:flex md:gap-[10px] md:py-2 px-[18px] rounded-[3px] bg-[#6576FF] text-[13px] text-[#FFFFFF] font-bold md:leading-5">CheckOut</button>
             </div>
         </div>
     </div>
